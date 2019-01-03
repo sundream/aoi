@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdbool.h>
-#include <stdint.h>
 #include <assert.h>
 #include <math.h>
 #include <string.h>

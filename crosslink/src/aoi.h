@@ -6,6 +6,7 @@
 
 #ifndef aoi_h
 #define aoi_h
+#include <stdint.h>
 
 typedef void * (*aoi_Alloc)(void *ud, void * ptr, size_t sz);
 typedef void (*enterAOI_Callback)(void *ud,uint32_t watcher, uint32_t marker);
