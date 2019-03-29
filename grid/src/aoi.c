@@ -674,10 +674,12 @@ aoi_get_view_by_pos(aoi_space *aoi,float pos[3],float range[3],int *number) {
 				for(i=0; i<tower->objects->number; i++) {
 					aoi_object *obj = tower->objects->slot[i];
 					bool inrange = true;
-					for(j=0; j<3; j++) {
-						if(fabs(obj->pos[j]-pos[j]) > range[j]) {
-							inrange = false;
-							break;
+					if (range != NULL) {
+						for(j=0; j<3; j++) {
+							if(fabs(obj->pos[j]-pos[j]) > range[j]) {
+								inrange = false;
+								break;
+							}
 						}
 					}
 					if (inrange) {
